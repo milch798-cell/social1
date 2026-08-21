@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.getElementById("home-quiz-btn").addEventListener("click", () => {
-    Nav.show("quiz-match-view");
-    QuizMatch.start();
+    Nav.show("quiz-lang-view");
+    QuizLang.render();
   });
 
   document.getElementById("grid-home-btn").addEventListener("click", () => {
