@@ -316,6 +316,107 @@ const VOCAB = [
       "누구나 투표할 수 있고, 한 표씩 평등하게, 내 손으로 직접, 비밀리에 투표하는 것, 이 네 가지가 공정한 선거의 약속이에요."
     ]
   },
+  {
+    slug: "국회",
+    hasMedia: true,
+    image: "국회.png",
+    ko: { word: "국회", desc: "국민의 대표들이 모여 나라의 중요한 규칙(법)을 만들고, 나라 살림을 감시하는 곳입니다." },
+    en: { word: "National Assembly", desc: "It is a place where representatives of the people gather to make important rules (laws) for the country and monitor the national budget and affairs." },
+    ru: { word: "Национальное собрание", desc: "Это место, где собираются представители народа, чтобы принимать важные правила (законы) страны и следить за государственным бюджетом и делами." },
+    zh: { word: "国会", desc: "这是国民代表聚集在一起制定国家重要规则（法律）并监督国家生活的地方。" },
+    examples: [
+      "어린이들이 안전하게 등교할 수 있도록 국회에서 새로운 법을 만들기로 했어요.\"",
+      "우리나라의 모든 약속이 시작되는 '약속 공장' 같은 곳이 바로 국회예요.",
+      "뉴스에서 본 것처럼 국민을 대표하는 국회의원들이 모여 나라의 미래를 위해 토론하는 곳이에요."
+    ]
+  },
+  {
+    slug: "국회의원",
+    hasMedia: true,
+    image: "국회의원.png",
+    ko: { word: "국회의원", desc: "국민이 투표로 뽑은 국민의 심부름꾼으로 국민의 목소리를 나라에 전달합니다." },
+    en: { word: "Member of National Assembly", desc: "They are \"servants of the people\" elected by vote, who deliver the voices of the citizens to the nation." },
+    ru: { word: "Депутат (Член Нац. собрания)", desc: "Это «посланники народа», выбранные путем голосования, которые передают голос граждан государству." },
+    zh: { word: "国会议员", desc: "他们是通过投票选出的“国民办事员”，负责将国民的声音传递给国家。" },
+    examples: [
+      "우리 반 친구들의 불편함을 대신 전하기 위해 뽑힌 학급 회장과 같은 역할이에요.",
+      "\"우리 동네에 도서관이 필요해요!\"라고 국민 대신 나라에 말해주는 대표자예요.",
+      "국민이 원하는 세상을 만들기 위해 법안(규칙안)을 만들고 발표하는 분들이에요."
+    ]
+  },
+  {
+    slug: "국가기관",
+    hasMedia: true,
+    image: "국가기관.png",
+    ko: { word: "국가기관", desc: "나라를 안전하고 행복하게 만들기 위해 세워진 커다란 조직들을 말합니다. 국회, 정부, 법원 등이 모두 국가기관입니다." },
+    en: { word: "State Institution", desc: "It refers to large organizations established to make the country safe and happy. The National Assembly, the Government, and the Courts are all national agencies." },
+    ru: { word: "Государственный орган", desc: "Это крупные организации, созданные для того, чтобы сделать страну безопасной и счастливой. Национальное собрание, Правительство и Суды — все это государственные органы." },
+    zh: { word: "国家机关", desc: "这是指为了让国家安全幸福而建立的大型组织。国会、政府、法院等都是国家机关。" },
+    examples: [
+      "학교 운영을 위해 꼭 필요한 교무실, 행정실, 보건실처럼 나라에 꼭 필요한 부서들이에요.",
+      "우리가 낸 세금으로 우리 동네 공원을 관리해 주는 곳들이 다 국가기관이에요."
+    ]
+  },
+  {
+    slug: "법률",
+    hasMedia: true,
+    image: "법률.png",
+    ko: { word: "법률", desc: "모든 국민이 지켜야 할 약속이자 규칙으로 국회에서 토론을 거쳐 만들어집니다." },
+    en: { word: "Law / Legislation", desc: "It is a promise and rule that all citizens must follow, created through discussions in the National Assembly." },
+    ru: { word: "Закон", desc: "Это обещание и правило, которое должны соблюдать все граждане; оно создается путем обсуждений в Национальном собрании." },
+    zh: { word: "法律", desc: "这是全体国民都必须遵守的约定和规则，是通过国会讨论制定的。" },
+    examples: [
+      "학교에서 \"학교 복도에서는 뛰지 않기\"를 모든 학생들이 지키틑 것처럼 국가의 국민이라면 누구나 지켜야 하는 규칙이에요.",
+      "식당에서 담배를 피울 수 없게 하는 법이 있어요.",
+      "환경을 위해 일회용품 사용을 줄이게 하는 법",
+      "자전거를 탈 때 헬멧을 꼭 써야 한다는 약속처럼 우리를 보호해 주는 방패 역할을 해요."
+    ]
+  },
+  {
+    slug: "예산안심의",
+    hasMedia: true,
+    image: "예산안심의.png",
+    ko: { word: "예산안 심의", desc: "나라의 세금을 어디에, 얼마나 쓸지 미리 꼼꼼하게 따져보고 결정하는 일입니다." },
+    en: { word: "Budget Deliberation", desc: "It is the process of carefully examining and deciding in advance where and how much of the country's taxes will be spent." },
+    ru: { word: "Рассмотрение бюджета", desc: "Это процесс тщательного изучения и принятия решения о том, куда и сколько государственных налогов будет потрачено заранее." },
+    zh: { word: "预算案审议", desc: "预先仔细考量并决定国家的税金将花在何处、花多少钱的工作。" },
+    examples: [
+      "필요한 물건을 사기 위해 용돈을 부모님께 받아야할 때, 부모님께 얼마의 용돈이 필요한지, 무엇을 사야하는지, 왜 사야하는지 말씀을 드리는 것과 같아요.",
+      "\"우리 학교 체육대회 예산이 너무 많지는 않나요?\"라고 확인는 회의와 비슷해요.",
+      "\"올해 학교 축제 예산이 너무 많지는 않은지\" 전교 회장단이 꼼꼼히 살펴보는 회의와 유사해요.",
+      "나라의 소중한 돈이 꼭 필요한 곳(어린이 병원, 학교 등)에 쓰이도록 허락해 주는 일이에요."
+    ]
+  },
+  {
+    slug: "결산심사",
+    hasMedia: true,
+    image: "결산심사.png",
+    ko: { word: "결산 심사", desc: "나라의 돈을 다 쓴 뒤에 잘 썼는지 계획한 곳에 적절하게 사용했는지 확인하는 것입니다." },
+    en: { word: "Settlement Audit", desc: "It is the process of checking whether the country's money was spent well and appropriately used as planned after all of it has been spent." },
+    ru: { word: "Аудит исполнения бюджета", desc: "Это процесс проверки того, были ли государственные деньги потрачены правильно и по назначению после того, как все они были израсходованы." },
+    zh: { word: "决算审查", desc: "在国家的钱全部花完后，确认是否花得当，以及是否按照计划用在了合适的地方。" },
+    examples: [
+      "부모님께서 주신 용돈을 사용한 뒤에 처음 용돈을 받을 때 말씀드린 사용 목적에 맞게 사용했는지 부모님께 확인을 받는 절차와 같아요.",
+      "부모님께서 \"지난번에 사기로 했던 축구공 대신 다른 걸 사진 않았는지\" 나중에 확인하는 것과 비슷해요.",
+      "\"지난번에 사기로 한 공을 정말 샀나요?\"라고 확인하는 것과 비슷해요.",
+      "돈을 낭비하지 않고 정직하게 썼는지 확인하는 과정과 비슷해요."
+    ]
+  },
+  {
+    slug: "국정감사",
+    hasMedia: true,
+    image: "국정감사.png",
+    ko: { word: "국정 감사", desc: "정부가 나라 일을 잘못하고 있지는 않은지 국회가 조사하고 감시하는 일입니다." },
+    en: { word: "Government Audit", desc: "It is the work of the National Assembly to investigate and monitor whether the government is doing its job correctly or making any mistakes." },
+    ru: { word: "Государственная ревизия", desc: "Это работа Национального собрания по расследованию и контролю за тем, правильно ли правительство выполняет свою работу и не допускает ли оно ошибок." },
+    zh: { word: "国政监查", desc: "这是指国会对政府是否在错误地处理国家事务进行调查和监督的工作。" },
+    examples: [
+      "나라가 국민과의 약속을 어기지 않고 열심히 일하고 있는지 일 년에 한 번 크게 확인하는 것이에요.",
+      "선생님이 모둠 활동 시간을 마친 후, 모둠별로 약속을 잘 지켰는지 검사하는 시간과 비슷해요.",
+      "\"왜 우리 동네 도로 공사가 1년째 멈춰 있나요?\"라고 국회의원이 공무원에게 묻는 일이에요.",
+      "나라가 국민과의 약속을 어기지 않고 열심히 일하고 있는지 일 년에 한 번 크게 확인하는 것이에요."
+    ]
+  }
 ];
 
 const LANGS = {
@@ -323,3 +424,4 @@ const LANGS = {
   ru: { label: "Russia", short: "RU" },
   zh: { label: "China", short: "ZH" }
 };
+
