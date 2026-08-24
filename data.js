@@ -11,7 +11,7 @@ const VOCAB = [
   {
     slug: "정치",
     hasMedia: true,
-    image: "정치.png",
+    image: "정치.jpg",
     ko: { word: "정치", desc: "사회 구성원 간의 대립과 갈등을 조정하여 문제를 해결하는 모든 과정입니다." },
     en: { word: "Politics", desc: "Politics is the entire process of resolving problems by mediating confrontations and conflicts among members of society." },
     ru: { word: "Политика", desc: "это весь процесс решения проблем путём регулирования противостояний и конфликтов между членами общества." },
