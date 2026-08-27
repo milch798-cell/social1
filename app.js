@@ -5,10 +5,12 @@
 const FLAG_SVG = {
   ko: `<svg viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <rect width="24" height="16" fill="#FFFFFF"/>
-        <circle cx="12" cy="8" r="4" fill="#CD2E3A"/>
-        <path d="M12 4 A4 4 0 0 1 12 12 A2 2 0 0 1 12 8 A2 2 0 0 0 12 4 Z" fill="#0047A0"/>
-        <circle cx="12" cy="6" r="0.62" fill="#0047A0"/>
-        <circle cx="12" cy="10" r="0.62" fill="#CD2E3A"/>
+        <g transform="translate(24,0) scale(-1,1)">
+          <g transform="rotate(-45 12 8)">
+            <circle cx="12" cy="8" r="4" fill="#0047A0"/>
+            <path d="M8 8 A4 4 0 0 1 16 8 A2 2 0 0 1 12 8 A2 2 0 0 0 8 8 Z" fill="#CD2E3A"/>
+          </g>
+        </g>
         <g stroke="#000000" stroke-width="0.62" stroke-linecap="butt">
           <line x1="2.6" y1="2.6" x2="6.2" y2="2.6"/>
           <line x1="2.6" y1="3.75" x2="6.2" y2="3.75"/>
