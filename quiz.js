@@ -8,6 +8,14 @@ function escapeHtml(str) {
   return div.innerHTML;
 }
 
+// 정답/오답 설명 문구를 만든다. 선택한 퀴즈 언어가 한국어면 중복 표기를 피한다.
+function explanationText(lang, item) {
+  if (lang === "ko") {
+    return `(한국어) ${item.ko.desc}`;
+  }
+  return `(${QUIZ_LANGS[lang].label}) ${item[lang].desc}\n(한국어) ${item.ko.desc}`;
+}
+
 const QuizEngine = {
   totalScore: 0,
   currentRetry: null,
@@ -33,12 +41,12 @@ const QuizLang = {
   render() {
     const wrap = document.getElementById("quiz-lang-flags");
     wrap.innerHTML = "";
-    Object.keys(LANGS).forEach((code) => {
+    Object.keys(QUIZ_LANGS).forEach((code) => {
       const btn = document.createElement("button");
       btn.type = "button";
       btn.className = "quiz-lang-btn";
       btn.dataset.lang = code;
-      btn.innerHTML = `${FLAG_SVG[code]}<span>${LANGS[code].label}</span>`;
+      btn.innerHTML = `${FLAG_SVG[code]}<span>${QUIZ_LANGS[code].label}</span>`;
       btn.addEventListener("click", () => this.select(code));
       wrap.appendChild(btn);
     });
@@ -165,7 +173,7 @@ const QuizOX = {
     this.idx = 0;
     this.score = 0;
     document.querySelector("#quiz-ox-view .quiz-stage-label").textContent =
-      `2단계 · OX 퀴즈 (${LANGS[QuizEngine.lang].label})`;
+      `2단계 · OX 퀴즈 (${QUIZ_LANGS[QuizEngine.lang].label})`;
     this.renderQuestion();
   },
 
@@ -188,9 +196,7 @@ const QuizOX = {
     } else {
       const lang = QuizEngine.lang;
       document.getElementById("ox-feedback").textContent =
-        `아쉬워요. 정답은 ${q.answer ? "O" : "X"}예요.\n` +
-        `(${LANGS[lang].label}) ${q.item[lang].desc}\n` +
-        `(한국어) ${q.item.ko.desc}`;
+        `아쉬워요. 정답은 ${q.answer ? "O" : "X"}예요.\n` + explanationText(lang, q.item);
     }
     document.querySelectorAll(".ox-btn").forEach((b) => { b.disabled = true; });
 
@@ -233,7 +239,7 @@ const QuizMC = {
     this.idx = 0;
     this.score = 0;
     document.querySelector("#quiz-mc-view .quiz-stage-label").textContent =
-      `3단계 · 5지선다 (${LANGS[QuizEngine.lang].label})`;
+      `3단계 · 5지선다 (${QUIZ_LANGS[QuizEngine.lang].label})`;
     this.renderQuestion();
   },
 
@@ -272,7 +278,7 @@ const QuizMC = {
     } else {
       const lang = QuizEngine.lang;
       document.getElementById("mc-feedback").textContent =
-        `아쉬워요.\n(${LANGS[lang].label}) ${q.item[lang].desc}\n(한국어) ${q.item.ko.desc}`;
+        `아쉬워요.\n` + explanationText(lang, q.item);
     }
 
     setTimeout(() => {
@@ -314,7 +320,7 @@ const QuizInitials = {
     this.idx = 0;
     this.score = 0;
     document.querySelector("#quiz-initials-view .quiz-stage-label").textContent =
-      `4단계 · 초성 퀴즈 (${LANGS[QuizEngine.lang].label})`;
+      `4단계 · 초성 퀴즈 (${QUIZ_LANGS[QuizEngine.lang].label})`;
     this.renderQuestion();
   },
 
@@ -344,9 +350,7 @@ const QuizInitials = {
     } else {
       const lang = QuizEngine.lang;
       document.getElementById("init-feedback").textContent =
-        `아쉬워요. 정답은 "${q.answer}"예요.\n` +
-        `(${LANGS[lang].label}) ${q.item[lang].desc}\n` +
-        `(한국어) ${q.item.ko.desc}`;
+        `아쉬워요. 정답은 "${q.answer}"예요.\n` + explanationText(lang, q.item);
     }
     input.disabled = true;
     document.querySelector(".init-submit-btn").disabled = true;

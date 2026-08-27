@@ -425,3 +425,10 @@ const LANGS = {
   zh: { label: "China", short: "ZH" }
 };
 
+// 퀴즈(2~4단계) 전용 언어 목록 — 학습 모드(LANGS)와 별개로 한국어를 포함한다.
+const QUIZ_LANGS = {
+  ko: { label: "대한민국", short: "KO" },
+  en: { label: "United States", short: "EN" },
+  ru: { label: "Russia", short: "RU" },
+  zh: { label: "China", short: "ZH" }
+};
